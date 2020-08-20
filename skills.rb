@@ -2,10 +2,34 @@ SKILLS = [
   {
     intro: 's is a string, find its length',
     answer: 's.length',
-    example: <<~HERE
+    example: <<~EOD
       'abc'.length
       => 3
-    HERE
+      EOD
+  },
+  {
+    intro: 's is a string, remove leading and trailing whitespace',
+    answer: 's.strip',
+    example: <<~EOD
+      "   abc  \\n ".strip
+      => "abc"
+      EOD
+  },
+  {
+    intro: 's is a string, make it UPPERCASE',
+    answer: 's.upcase',
+    example: <<~EOD
+      "abc".upcase
+      => "ABC"
+      EOD
+  },
+  {
+    intro: 's is a string, make it lowercase',
+    answer: 's.downcase',
+    example: <<~EOD
+      "ABC".downcase
+      => "abc"
+      EOD
   },
 ]
 
