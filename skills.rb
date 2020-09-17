@@ -31,6 +31,14 @@ SKILLS = [
       => "abc"
       EOD
   },
+  {
+    intro: 'what\'s the equivalent of var_dump(a)?',
+    answer: 'a.inspect',
+    example: <<~EOD
+      puts [] # prints nothing
+      puts [].inspect # prints "[]"
+      EOD
+  },
 ]
 
 loop do
