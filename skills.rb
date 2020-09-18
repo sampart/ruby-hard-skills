@@ -32,6 +32,14 @@ SKILLS = [
       EOD
   },
   {
+    intro: 's is a string, make the first character uppercase',
+    answer: 's.capitalize',
+    example: <<~EOD
+      "abc".capitalize
+      => "Abc"
+      EOD
+  },
+  {
     intro: 'what\'s the equivalent of var_dump(a)?',
     answer: 'a.inspect',
     example: <<~EOD
