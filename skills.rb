@@ -47,6 +47,14 @@ SKILLS = [
       puts [].inspect # prints "[]"
       EOD
   },
+  {
+    intro: 'is :x in array a?',
+    answer: 'a.include?(:x)',
+    example: <<~EOD
+      [1,2,3].include?(1) # true
+      [1,2,3].include?(4) # false
+      EOD
+  },
 ]
 
 loop do
