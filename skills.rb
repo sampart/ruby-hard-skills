@@ -55,6 +55,14 @@ SKILLS = [
       [1,2,3].include?(4) # false
       EOD
   },
+  {
+    intro: 'is :x a key in hash h?',
+    answer: 'h.include?(:x)',
+    example: <<~EOD
+      {a: "hi"}.include?(:a) # true
+      {a: "hi"}.include?(:b) # false
+      EOD
+  },
 ]
 
 loop do
