@@ -16,6 +16,14 @@ SKILLS = [
       EOD
   },
   {
+    intro: 's is a string, remove the prefix "log" if present',
+    answer: 's.delete_prefix "log"',
+    example: <<~EOD
+      "log hi".delete_prefix "log"
+      => " hi"    
+      EOD
+  },
+  {
     intro: 's is a string, make it UPPERCASE',
     answer: 's.upcase',
     example: <<~EOD
@@ -40,6 +48,16 @@ SKILLS = [
       EOD
   },
   {
+    intro: 's is a string, does it start with "log"?',
+    answer: 's.start_with? "log"',
+    example: <<~EOD
+        irb> "hi".start_with? "log"
+        => false
+        irb> "hi".start_with? "h"
+        => true    
+      EOD
+  },
+  {
     intro: 'what\'s the equivalent of var_dump(a)?',
     answer: 'a.inspect',
     example: <<~EOD
@@ -49,7 +67,7 @@ SKILLS = [
   },
   {
     intro: 'is :x in array a?',
-    answer: 'a.include?(:x)',
+    answer: 'a.include? :x',
     example: <<~EOD
       [1,2,3].include?(1) # true
       [1,2,3].include?(4) # false
@@ -63,6 +81,49 @@ SKILLS = [
       {a: "hi"}.include?(:b) # false
       EOD
   },
+  {
+    intro: 'get the maximum value from array a',
+    answer: 'a.max',
+    example: <<~EOD
+      irb> [1, 5, 2].max
+      => 5    
+      EOD
+  },
+  {
+    intro: 'what would 10 <=> 5 return?',
+    answer: '1',
+    example: <<~EOD
+      <=> return value: 1 = left greater; 0 = same; -1 = right greater
+    EOD
+  },
+  {
+    intro: 'what would 6 <=> 100 return?',
+    answer: '-1',
+    example: <<~EOD
+      <=> return value: 1 = left greater; 0 = same; -1 = right greater
+    EOD
+  },
+  {
+    intro: 'what would 5 <=> 5 return?',
+    answer: '0',
+    example: <<~EOD
+      <=> return value: 1 = left greater; 0 = same; -1 = right greater
+    EOD
+  },
+  {
+    intro: 'what would `"somestring"[/[so]+/]` return?',
+    answer: '"so"',
+    example: <<~EOD
+      "somestring"[/[so]+/] -> the matched string or nil
+    EOD
+  },
+  {
+    intro: 'what would `"somestring"[/[so]+(\S)/, 1]` return?',
+    answer: '"m"',
+    example: <<~EOD
+      "string"[/regex/, n] gets the nth capture group
+    EOD
+  }
 ]
 
 loop do
