@@ -82,6 +82,14 @@ SKILLS = [
       EOD
   },
   {
+    intro: 'sort hash h by key',
+    answer: 'h.sort.to_h',
+    example: <<~EOD
+      {b: "a", a: "a"}.sort.to_h # {:a=>"a", :b=>"a"}
+      {b: "a", a: "a"}.sort # [[:a, "a"], [:b, "a"]]
+      EOD
+  },
+  {
     intro: 'get the maximum value from array a',
     answer: 'a.max',
     example: <<~EOD
