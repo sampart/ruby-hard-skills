@@ -141,7 +141,7 @@ loop do
   if answer == skill[:answer]
     puts "Correct!"
   else
-    puts "Sorry..."
+    puts "Sorry: #{skill[:answer]}\n"
   end
   puts skill[:example].strip
   gets
